@@ -1,0 +1,135 @@
+:root {
+    --main-bg-color: blue;
+    --secondary-bg-color: red;
+    --main-border: 4px;
+}
+
+body {
+    margin: 0px;
+    font-size: 20px;
+}
+
+.box {
+    width: 100px;
+    aspect-ratio: 1;
+    background-color: var(--main-bg-color);
+    transition: 300ms
+}
+
+.box:hover {
+    width: 50px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+
+.text {
+
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+}
+
+/* comentarios */
+.rel {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+    margin: 20px;
+    border: solid green 5px;
+    border-radius: 10px;
+}
+
+.abs {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin: 20px;
+    position: absolute
+}
+
+
+.red {
+    color: red;
+    font-size: 30px;
+}
+
+
+.item1{
+    grid-area: header;
+    background-color: red;
+}
+.item2{
+    grid-area: menu;
+    background-color: green;
+}
+.item3{
+    grid-area: main;
+    background-color: blue;
+}
+.item4{
+    grid-area: footer;
+    background-color: yellow;
+}
+.grid-container{
+    display: grid;
+    gap: 1px;
+    height: 100vh;
+    grid-template-areas: 
+    'header header header header header header'
+    'menu main main main main main'
+    'menu footer footer footer footer footer'
+    ;
+}
+
+.flex{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex2{
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.cont{
+    background-color: red;
+    width: 100px;
+    aspect-ratio: 1;
+}
+
+.el1, .el2{
+    width: 50px;
+    aspect-ratio: 2;
+    background-color: green;
+}
+
+.card{
+    width: 200px;
+    height: 300px;
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img{
+    width: 30px;
+    aspect-ratio: 1;
+    background-color: red;
+    border-radius: 50%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
