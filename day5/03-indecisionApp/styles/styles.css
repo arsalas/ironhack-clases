@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
+body{
+    margin: 0px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Dangrek', cursive;
+    font-size: 30px;
+}
+
+h1{
+    padding: 0px;
+    margin: 0px;
+}
+
+#container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+}
+
+input {
+    padding: 10px 15px;
+    border: solid 1px #333;
+    border-radius: 4px;
+    min-width: 400px;
+}
+
+input:focus{
+    outline: none;
+}
+
+form{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+}
+
+#content {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    right: 0px;
+}
+
+.decision{
+    text-transform: uppercase;
+}
+
+label{
+    font-size: 20px;
+}
