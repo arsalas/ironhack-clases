@@ -1,0 +1,32 @@
+
+
+body{
+    margin: 0px;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input, select{
+    padding: 10px;
+    border-radius: 4px;
+    border: solid 1px #333;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #1530cc;
+    color: #fff;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover{
+    background-color: #112282;
+
+}
