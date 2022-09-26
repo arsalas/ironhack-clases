@@ -1,0 +1,33 @@
+body {
+    margin: 0px
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button {
+    padding: 15px 40px;
+    font-weight: bold;
+    border-radius: 200px;
+    border: none;
+    background-color: #251486;
+    font-size: 30px;
+    color: #fff;
+    transition: 300ms;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 2px 34px -15px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 2px 34px -15px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 2px 34px -15px rgba(0, 0, 0, 0.75);
+}
+
+button:hover {
+    background-color: #3618db;
+    -webkit-box-shadow: 1px 2px 34px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 2px 34px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 2px 34px 3px rgba(0, 0, 0, 0.75);
+}
