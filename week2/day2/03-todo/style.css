@@ -1,0 +1,106 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #eee;
+}
+
+button {
+    padding: 20px 50px;
+    background-color: cornflowerblue;
+    color: #eee;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+button:hover{
+    background-color: rgb(76, 113, 181);
+}
+
+#list {
+    min-width: 50%;
+    flex: 1;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius:  4px;
+    -webkit-box-shadow: -5px 3px 45px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 3px 45px 0px rgba(0,0,0,0.75);
+    box-shadow: -5px 3px 45px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+    overflow-y: auto;
+
+}
+
+.todo {
+    padding: 20px;
+    border: 1px solid #5486dd;
+    border-left: 4px solid #5486dd;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.btn-remove {
+    padding: 5px 10px;
+    background-color: rgb(160, 5, 5);
+    font-size: 16px;
+}
+
+.btn-remove:hover{
+    background-color: rgb(108, 3, 3);
+}
+
+input{
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+#clean{
+    background-color: #d71111;
+}
+
+#clean:hover{
+    background-color: #ab0d0d;
+}
+
+/* STYLES SCROLLBAT */
+#list::-webkit-scrollbar {
+    width: 8px;
+    /* Tamaño del scroll en vertical */
+    height: 8px;
+    /* Tamaño del scroll en horizontal */
+    border-radius: 4px;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+/* Cambia el color de la barra */
+#list::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+#list::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+#list::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
