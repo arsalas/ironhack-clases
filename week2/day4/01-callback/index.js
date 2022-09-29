@@ -1,29 +1,64 @@
+// Callback
 
-// Creamos una funcion que sera el callback
-const eventEmit = (arg) => {
+const emitEvent = (arg) => {
     console.log('El evento emitido es: ', arg);
 }
-// creamos una funcion que recibira un callback y una informacion de evento
+
 const eventCallback = (e, callback) => {
     callback(e);
 }
 
-// llamamos a la funcion que ejecutara el callback
-eventCallback('click', eventEmit, );
-eventCallback('submit', eventEmit);
+eventCallback('click', emitEvent);
 
+eventCallback('submit', ()=> {
+    console.log('esto es una funcion callback')
+});
 
-// Creamos una funcion callback
-const print = (element) => {
-    console.log(element)
-}
+// document.querySelector('#id').addEventListener('click', () => {
 
-// creamos la funcion que ejecutara el callback
-const consoleArray = (arr, callback) => {
-    for (let i = 0; i < arr.length; i++) {
-        callback(arr[i])
+// })
+
+const arr = [1, 2, 3, 4, 5]
+
+// const map = (elemento) => {}
+
+const funcCallback = (array) => {
+    const newArray = []
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i] * 2;
+       newArray.push(element);
     }
+    return newArray
+}    
+
+const arrayCallback = (array, callback) => {
+    return callback(array);
 }
 
-// llamamos a la funcion que ejecutara el callback
-consoleArray(['Hola', 'Mundo'], print);
+const newCar = arrayCallback(arr, funcCallback);
+console.log(newCar)
+
+
+
+// Esta funcion seria el equivalente a un map
+// Definimos la funcion que recibe una array y una funcion
+const mapDup = (array, callback) =>{
+    const newArray = []
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        const res = callback(element);
+        newArray.push(res);
+    }
+    return newArray;
+}
+
+// Ejecutamos el map
+const result1 = mapDup(arr, (element) => {
+    return element * 2
+})
+console.log('map replicado: ', result1)
+
+const result2 = arr.map((element) => {
+    return element * 2
+})
+console.log('map original: ', result2)
