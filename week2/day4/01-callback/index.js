@@ -53,7 +53,11 @@ const mapDup = (array, callback) =>{
 }
 
 // Ejecutamos el map
-const result1 = mapDup(arr, (element) => {
+function duplicar(element){
+    return element * 2;
+}
+const result1 = mapDup(arr, duplicar)
+const result3 = mapDup(arr, (element) => {
     return element * 2
 })
 console.log('map replicado: ', result1)

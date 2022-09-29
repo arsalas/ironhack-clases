@@ -101,7 +101,7 @@ find(numeros, multiploDe10) // 3
 (Es decir, crea un nuevo array y va recorriendo elemento por elemento, mientras el callback de true, no los agrega, cuando el callback da `false` *por primera vez* agrega todos los elementos restantes a partir de dicho elemento inclusive)
 
 ```javascript
-const numeros = [40, 33, 50, 8, 2, 3, 20]
+const numeros = [40, 30, 50, 8, 2, 3, 20]
 const multiploDe10 = x => x % 10 === 0
 dropWhile(numeros, multiploDe10) // [8, 2, 3, 20]
 ```
