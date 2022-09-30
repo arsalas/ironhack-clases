@@ -24,3 +24,9 @@ main nav {
 .agenda-header{
     background-color: #b61111 !important;
 }
+
+#list{
+    overflow: hidden;
+    overflow-y: auto;
+    height: calc(100% - 55px - 57px);
+}

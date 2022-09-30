@@ -3,7 +3,7 @@
 // Reto 3 - Hacer que al pulsar una tecla en el input se vea en un console.log el valor del input
 // Reto 4 - Hacer una array con la informacion de los 151 primeros pokemons
 // Reto 5 - Mostrar en la lista el nombre y la imagen de los pokemons
-
+// Reto 6 - Bonus filtrar la lista por el nombre del pokemon que este en el input
 
 // Paso 1
 const paso1 = async () => {
@@ -71,7 +71,6 @@ const getData = async () => {
         const data = await response.json();
         pokemons.push(data)
     }
-    console.log(pokemons);
 }
 
 // Hacemos una peticion a la pokeapi
@@ -127,8 +126,54 @@ window.addEventListener('load', async () => {
     //     pokemons.push(data)
     // }
     // OPCION - B
-    const pokemons = await getAllPokemons(151)
+    const pokemons = await getAllPokemons(151);
+
+    const list = document.querySelector('#list');
+    let html = ''
+    for (let i = 0; i < pokemons.length; i++) {
+        const element = pokemons[i];
+        html += `
+        <a class="panel-block is-active">
+            <figure class="image is-48x48">
+                <img src="${element.sprites.front_default}">
+            </figure>
+        <span class="is-capitalized has-text-weight-semibold	">${element.name}</span>
+        </a>`
+    }
+    list.innerHTML = html
     console.log(pokemons);
+    // BONUS
+    // Guardar la referencia del input
+    const input = document.querySelector('input')
+    // Evento que se ejecute al escribir en el input
+    input.addEventListener('keyup', () => {
+
+        // Con filter filtra la array de los pokemon
+        const pokemonFilter = pokemons.filter((pokemon) => {
+            // La condicion para que filtre es que el valor del input este incluido en el nombre del pokemon
+            // Pasamos a minusculas el nombre y el valor del input para mejorar la busqueda
+            if (pokemon.name.toLowerCase().includes(input.value.toLowerCase()))
+                return true
+        })
+        // Aqui tendremos en pokemonFilter los pokemons que cumplen la condicion
+        let html = '';
+        // Recorremos la array de los pokemon filtrados
+        for (let i = 0; i < pokemonFilter.length; i++) {
+            const element = pokemonFilter[i];
+            // Vamos guardando en la variable html el html con la imagen y el nombre del pokemon que
+            // incluiremos en el html
+            html += `
+            <a class="panel-block is-active">
+                <figure class="image is-48x48">
+                    <img src="${element.sprites.front_default}">
+                </figure>
+            <span class="is-capitalized has-text-weight-semibold">${element.name}</span>
+            </a>`
+        }
+        // Por ultimo vamos al nodo de html de la lista y pintamos en html
+        // con innerHTML con la variable donde hemos guardado todo el html
+        list.innerHTML = html
+    })
 })
 
 
