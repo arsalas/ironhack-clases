@@ -1,0 +1,26 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+body{
+    background-color: #eee;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main nav {
+    width: 400px;
+    height: 80vh;
+
+}
+
+
+.agenda{
+    background-color: #fff;
+}
+.agenda-header{
+    background-color: #b61111 !important;
+}
