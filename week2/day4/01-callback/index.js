@@ -14,6 +14,15 @@ eventCallback('submit', ()=> {
     console.log('esto es una funcion callback')
 });
 
+const funcion = (callback) => {
+    callback()
+
+
+funcion(()=> {
+    console.log('saludar')
+})
+}
+
 // document.querySelector('#id').addEventListener('click', () => {
 
 // })

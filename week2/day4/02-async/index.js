@@ -46,16 +46,16 @@ const comerPizza = () => {
 // console.log(paso4);
 
 // then
-// prepararPizza().then((result) => {
-//     console.log(result);
-//     calentarHorno().then((result) => {
-//         console.log(result);
-//         cocinarPizza().then((result) => {
-//             console.log(result);
-//             console.log(comerPizza());
-//         })
-//     })
-// })
+prepararPizza().then((result) => {
+    console.log(result);
+    calentarHorno().then((result) => {
+        console.log(result);
+        cocinarPizza().then((result) => {
+            console.log(result);
+            console.log(comerPizza());
+        })
+    })
+})
 
 // async await
 const recetaPizza = async () => {
