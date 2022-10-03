@@ -1,0 +1,50 @@
+
+.my-navbar{
+    background-color: #202020;
+    border-bottom: 1px solid #555;
+    color: #fff !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-item{
+    color: #fff !important;
+
+}
+
+.btn-dark{
+
+    background-color: #303030;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 0px;
+}
+
+.btn-dark{
+    color: #fff;
+}
+
+.my-navbar .input{
+    background-color: #0C0C0C;
+    border: 1px solid #303030;
+    width: 500px
+}
+
+.my-navbar .input::placeholder {
+    color: #eee;
+}
+
+.login-btn{
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #3ea6ff;
+    border-color: #3ea6ff;
+}
+
+.login-btn:hover{
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #3ea6ff;
+    border-color: #3ea6ff;
+}
+

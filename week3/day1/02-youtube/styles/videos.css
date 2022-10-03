@@ -1,0 +1,51 @@
+.grid {
+    padding: 20px;
+}
+
+.video-info {
+    color: #ccc;
+    font-size: 0.8rem;
+}
+
+.video-title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.cover-img {
+    position: relative;
+}
+
+.cover-img img {
+    position: absolut;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+.cover-img span{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #222;
+    color: #fff;
+    font-weight: 700;
+}
+
+.sub-header{
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #303030;
+    padding: 10px;
+    border-bottom: 1px solid #555
+}
+
+.sub-header-item{
+    border: solid 1px #666;
+    margin: 0px 10px;
+    padding: 5px 20px;
+    border-radius: 200px;
+    background-color: #444;
+    color: #eee;
+}

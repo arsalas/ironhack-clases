@@ -6636,7 +6636,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     order: 3;
   }
   .pagination {
-    justify-content: space-between;
+    justify-content: space-between;--columnGap
     margin-bottom: 0;
     margin-top: 0;
   }

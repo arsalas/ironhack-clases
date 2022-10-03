@@ -1,0 +1,25 @@
+
+.layout{
+display: flex;
+
+}
+
+.layout aside{
+    width: 250px;
+    background-color: #303030;
+    min-height: 100vh;
+}
+.layout .videos {
+    width: calc(100% - 300px);
+}
+
+.aside-item{
+    color: #eee;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.aside-item:hover{
+    background-color: #666;
+}
