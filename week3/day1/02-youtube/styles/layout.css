@@ -10,7 +10,7 @@ display: flex;
     min-height: 100vh;
 }
 .layout .videos {
-    width: calc(100% - 300px);
+    width: calc(100% - 250px);
 }
 
 .aside-item{
