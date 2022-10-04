@@ -6,8 +6,8 @@ display: flex;
 
 .layout aside{
     width: 250px;
-    background-color: #303030;
-    min-height: 100vh;
+    background-color: #202121;
+    min-height: calc(100vh - 57px);
 }
 .layout .videos {
     width: calc(100% - 250px);
