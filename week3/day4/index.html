@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        button{
+            position: fixed;
+            right: 20px;
+            top: 20px;
+        }
+
+        .secciones {
+            background-color: red;
+        }
+
+        .secciones ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px 20px;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .is-active ul {
+
+            flex-direction: column;
+            background-color: blue;
+            margin-top: 50px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <div class="secciones">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+            </ul>
+        </div>
+        <button><i class="fa-solid fa-bars"></i></button>
+    </div>
+
+<script>
+    document.querySelector('button').addEventListener('click', ()=>{
+        document.querySelector('.secciones').classList.toggle('is-active')
+    })
+</script>
+
+</body>
+
+</html>
