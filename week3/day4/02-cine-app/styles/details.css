@@ -1,0 +1,17 @@
+#backdrop{
+    height: 20rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    color: #eee;
+}
+
+#backdrop .title{
+    color: #fff;
+    margin: 0px
+}
+
+#rate{
+    font-weight: 500;
+}
