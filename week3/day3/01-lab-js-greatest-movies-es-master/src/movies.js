@@ -14,6 +14,7 @@ function howManyMovies(moviesArray) {
     // Si la array esta vacia
     if (moviesArray.length == 0) return 0;
     const newArray = moviesArray.filter(movie => {
+        debugger;
         if (movie.director === 'Steven Spielberg' && movie.genre.includes('Drama')) return true
     })
     return newArray.length
