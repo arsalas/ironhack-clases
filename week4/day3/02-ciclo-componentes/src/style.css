@@ -1,0 +1,39 @@
+:root,
+:root.light {
+
+    --bg: #fff;
+    --color: #333;
+}
+
+:root.dark {
+    --bg: #333;
+    --color: #fff;
+}
+
+:root.blue{
+    --bg: #05396b;
+    --color: #e7f1fe;
+}
+
+:root.pink {
+    --bg: #ffcad4;
+    --color: #e75480;
+}
+
+:root.space {
+    --bg: #000;
+    --color: #f2bd16
+}
+
+* {
+    background-color: var(--bg);
+    color: var(--color);
+    transition: 300ms;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #333;
+        --color: #fff;
+    }
+}
