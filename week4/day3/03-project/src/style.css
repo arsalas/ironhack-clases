@@ -1,0 +1,19 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+body{
+    background-color: #f2f4fc;
+}
+
+.button{
+    padding: 1.5rem;
+    border-radius: 0px;
+}
+
+.button.is-primary{
+   
+    background-color: #072ac8;
+}
+
+.button.is-primary:hover{
+    background-color: #292e47;
+}
