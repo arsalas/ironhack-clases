@@ -14,9 +14,10 @@
 /* sitcky deja pa posicion en fixed cuando llega a donde hemos indicado(top en este ejemplo) */
 .navbar {
     background-color: #ed1a23;
-    /* position: sticky;
-    top: 0px; */
+    position: sticky;
+    top: 0px;
     justify-content: center;
     display: flex;
+    /* position: fixed; */
 }
 </style>

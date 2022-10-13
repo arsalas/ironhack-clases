@@ -21,3 +21,9 @@
     --dark: #3a2d23;
     --steel: #b7b7ce;
 }
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url('https://i.pinimg.com/originals/6e/f6/2b/6ef62b28c7e65f900ae813a377d99f51.png');
+}
