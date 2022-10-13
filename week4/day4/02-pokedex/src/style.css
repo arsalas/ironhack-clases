@@ -1,0 +1,133 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css";
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+:root {
+    color-scheme: light dark;
+    --grass: #78C850;
+    --fire: #f08030;
+    --water: #6890f0;
+    --bug: #a8b820;
+    --normal: #a8a77a;
+    --poison: #a040a0;
+    --electric: #f8d030;
+    --ground: #e0c068;
+    --fairy: #ee99ac;
+    --fighting: #c03028;
+    --psychic: #f85888;
+    --rock: #b8a038;
+    --ghost: #705898;
+    --ice: #98d8d8;
+    --dragon: #7038f8;
+    --dark: #3a2d23;
+    --steel: #b7b7ce;
+
+
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)),
+        url('https://i.pinimg.com/originals/6e/f6/2b/6ef62b28c7e65f900ae813a377d99f51.png');
+
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)),
+        url('https://st2.depositphotos.com/3213441/12022/v/600/depositphotos_120226446-stock-illustration-pokemon-go-pokeball-seamless-texture.jpg'); */
+}
+
+.type {
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+    font-size: 1.3rem;
+    background-color: #747bff;
+    text-transform: uppercase;
+}
+
+.type.grass {
+    background-color: var(--grass);
+}
+
+.type.fire {
+    background-color: var(--fire);
+}
+
+.type.water {
+    background-color: var(--water);
+}
+
+.type.bug {
+    background-color: var(--bug);
+}
+
+.type.normal {
+    background-color: var(--normal);
+}
+
+.type.poison {
+    background-color: var(--poison);
+}
+
+.type.electric {
+    background-color: var(--electric);
+}
+
+.type.ground {
+    background-color: var(--ground);
+}
+
+.type.fairy {
+    background-color: var(--fairy);
+}
+
+.type.fighting {
+    background-color: var(--fighting);
+}
+
+.type.psychic {
+    background-color: var(--psychic);
+}
+
+.type.rock {
+    background-color: var(--rock);
+}
+
+.type.ghost {
+    background-color: var(--ghost);
+}
+
+.type.ice {
+    background-color: var(--ice);
+}
+
+.type.dragon {
+    background-color: var(--dragon);
+}
+
+.type.dark {
+    background-color: var(--dark);
+}
+
+.type.steel {
+    background-color: var(--steel);
+}
+
+
+
+/* 
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+
+    a:hover {
+        color: #747bff;
+    }
+
+    button {
+        background-color: #f9f9f9;
+    }
+} */

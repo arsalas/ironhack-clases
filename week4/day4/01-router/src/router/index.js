@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 // 1. Define route components.
 // These can be imported from other files
@@ -12,9 +12,36 @@ import {createRouter, createWebHistory} from 'vue-router'
 // lazyloading solo importa el componente cuando lo necesitas
 const routes = [
     //http://127.0.0.1:5173/
-  { path: '/', component: () => import('../views/Home.vue') },
-//   http://127.0.0.1:5173/about
-  { path: '/about', component: () => import('../views/About.vue') },
+    {
+        path: '/',
+        name: 'home',
+        component: () => import('../views/Home.vue'),
+
+    },
+    //   http://127.0.0.1:5173/about
+    {
+        path: '/about-us',
+        name: 'about',
+        component: () => import('../views/About.vue')
+    },
+    {
+        path: '/subrutas',
+        name: 'subrutas',
+        component: () => import('../views/Subrutas.vue'),
+        children: [
+            {
+                path: 'ruta1',
+                name: 'ruta1',
+                component: () => import('../views/Ruta1.vue')
+            }
+
+        ]
+    },
+    {
+        path: '/:id',
+        name: 'parametros',
+        component: () => import('../views/Parametros.vue')
+    }
 ]
 
 // 3. Create the router instance and pass the `routes` option
@@ -24,15 +51,15 @@ const routes = [
 // createWebHistory tiene una navegacion entre paginas solo con la url ej: 127.0.0.1/about
 // createWebHashHistory tine una navegavion entre paginas con un # ej: 127.0.0.1#about
 const router = createRouter({
-  // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  history: createWebHistory(),
-  routes, // short for `routes: routes`
+    // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
+    history: createWebHistory(),
+    routes, // short for `routes: routes`
 })
 
 export default router;
 
 // Este paso lo hacemos en el main.js
-// 5. Create and mount the root instance. 
+// 5. Create and mount the root instance.
 // const app = Vue.createApp({})
 // Make sure to _use_ the router instance to make the
 // whole app router-aware.
