@@ -87,7 +87,7 @@ const loadDetails = async () => {
     isLoading.value = false
 }
 
-onMounted(async () => {
+onMounted(() => {
     if (route.params.id > limitPokemons) {
         // con push cambiamos la ruta y la web navega al name que le digamos
         router.push({ name: 'home' })
