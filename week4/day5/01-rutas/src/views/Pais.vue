@@ -11,10 +11,12 @@ watch(() => route.params.pais, newValue => {
     console.log('pais cambiado', newValue)
     paisInfo.value = findPais(route.params.pais)
 })
+
 onMounted(() => {
     console.log('componente montado')
     paisInfo.value = findPais(route.params.pais)
 })
+
 // Simular la busqueda del pais
 const findPais = (pais) => {
     return pais
