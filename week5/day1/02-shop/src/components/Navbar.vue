@@ -20,7 +20,10 @@
                 </router-link>
 
                 <router-link class="navbar-item" :to="{name: 'cart'}">
-                    Cart <span class="ml-2 tag is-danger is-rounded">{{cartStore.products.length}}</span>
+                    Cart
+                    <span class="ml-2 tag is-danger is-rounded">
+                        {{cartStore.products.length}}
+                    </span>
                 </router-link>
 
 

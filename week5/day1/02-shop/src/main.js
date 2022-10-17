@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import router from './router'
-import {createPinia} from 'pinia'
+import { createPinia } from 'pinia'
 
 // Crear un store con pinia del carrito donde guardaremos una
 // array de productos
