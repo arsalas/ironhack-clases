@@ -15,7 +15,9 @@ export const useAuthStore = defineStore('auth', {
 
     actions: {
        login(name, email){
-
+        this.isAuth = true;
+        this.user.name = name;
+        this.user.email = email;
        }
     }
 })

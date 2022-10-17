@@ -36,14 +36,21 @@
     -->
 </template>
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue';
+import { useRouter } from 'vue-router'
+import { useAuthStore } from '../store/auth'
 
+const router = useRouter();
+const authStore = useAuthStore();
 const name = ref('');
 const email = ref('');
 const password = ref('');
 
 const onSubmit = () => {
     console.log('formulario enviado', name.value, email.value, password.value)
+    authStore.login(name.value, email.value);
+    // Nos redirige al home
+    router.push({ name: 'home' })
 }
 
 </script>
