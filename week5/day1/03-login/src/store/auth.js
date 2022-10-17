@@ -18,6 +18,14 @@ export const useAuthStore = defineStore('auth', {
         this.isAuth = true;
         this.user.name = name;
         this.user.email = email;
+       },
+
+       logout(){
+        this.isAuth = false;
+        this.user.name = '';
+        this.user.email = '';
        }
+
+
     }
 })
