@@ -6,8 +6,9 @@ export const useCartStore = defineStore('cart', {
     }),
 
     actions: {
-        add(product){
-
+        //Hacer un push del producto al state products
+        add(product) {
+            this.products.push(product)
         }
     }
 })
