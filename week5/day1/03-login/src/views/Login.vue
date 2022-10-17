@@ -1,23 +1,23 @@
 <template>
     <div class="section">
         <div class="container">
-            <form>
+            <form @submit.prevent="onSubmit">
                 <div class="field">
                     <label class="label">Name</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Nombre">
+                        <input v-model="name" class="input" type="text" placeholder="Nombre">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">Email</label>
                     <div class="control">
-                        <input class="input" type="email" placeholder="email">
+                        <input v-model="email" class="input" type="email" placeholder="email">
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">Password</label>
                     <div class="control">
-                        <input class="input" type="password" placeholder="password">
+                        <input v-model="password" class="input" type="password" placeholder="password">
                     </div>
                 </div>
                 <div class="field">
@@ -36,6 +36,16 @@
     -->
 </template>
 <script setup>
+import {ref} from 'vue'
+
+const name = ref('');
+const email = ref('');
+const password = ref('');
+
+const onSubmit = () => {
+    console.log('formulario enviado', name.value, email.value, password.value)
+}
+
 </script>
 <style scoped>
 

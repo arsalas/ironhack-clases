@@ -14,6 +14,8 @@ export const useAuthStore = defineStore('auth', {
     }),
 
     actions: {
-       
+       login(name, email){
+
+       }
     }
 })
