@@ -10,5 +10,15 @@ export const useCartStore = defineStore('cart', {
         add(product) {
             this.products.push(product)
         }
-    }
+    },
+    persist: {
+        // Nos activa la persistencia del store
+        enabled: true,
+        strategies: [
+          {
+            key: 'cart',
+            storage: localStorage,
+          },
+        ],
+      },
 })
