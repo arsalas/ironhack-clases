@@ -23,6 +23,13 @@
             </div>
         </div>
 
+        <!-- TODO 
+            CRUD -> Create Read Update Delete
+            1- Que el estado sea persistente
+            2- Poder borrar posts
+            3- Poder editar posts
+        -->
+
     </div>
 </template>
 <script setup>

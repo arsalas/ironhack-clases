@@ -11,11 +11,13 @@
     </div>
     <!-- Crear un componente para visualizar el post como el lab de Tweets
     Recorrer la array para mostrarlos todos -->
+    <PostMessage v-for="post in postStore.posts" :key="post.id" :post="post" />
 </template>
 <script setup>
 import { ref } from 'vue';
 import { usePostsStore } from '../store/posts'
 import { useAuthStore } from '../store/auth'
+import PostMessage from './PostMessage.vue';
 
 const postStore = usePostsStore();
 const authStore = useAuthStore();
@@ -25,6 +27,7 @@ const message = ref('');
 
 const onSubmit = () => {
     postStore.new(message.value, authStore.user.name)
+    message.value = '';
 }
 
 </script>
