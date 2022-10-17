@@ -16,7 +16,9 @@ export const useCartStore = defineStore('cart', {
         enabled: true,
         strategies: [
           {
+            // Key del store
             key: 'cart',
+            // donde guarda el store
             storage: localStorage,
           },
         ],
